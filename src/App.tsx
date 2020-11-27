@@ -9,6 +9,7 @@ import 'react-tabs/style/react-tabs.css';
 
 const Counter = React.lazy(() => import('./features/counter/Counter'));
 const Users = React.lazy(() => import('./features/users/Users'));
+const Users2 = React.lazy(() => import('./features/users/Users2'));
 
 function App() {
   return (
@@ -25,9 +26,11 @@ function App() {
             </TabList>
             <TabPanel>
               <Counter />
+              <Users2/>
             </TabPanel>
             <TabPanel>
               <Users/>
+              <Users2/>
             </TabPanel>
           </Tabs>
         </section>
