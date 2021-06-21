@@ -64,6 +64,7 @@ export const fetchUsersDataFromGrqphQL = (url: string, query: string): AppThunk 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query }),
       }).then(res => res.json());
+      console.log('users --->:', usersData.data)
       dispatch(fetchUsersDataSuccessful(usersData.data.users));
     } catch (error) {
       dispatch(fetchUsersDataFailed(error.message));
